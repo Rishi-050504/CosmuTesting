@@ -1,0 +1,358 @@
+/* --- Base Variables (Light Theme Default) --- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --muted-color: #6c757d;
+  --border-color: #dee2e6;
+  --accent-color: #764BFF; /* Purple accent */
+  --light-bg: #f8f9fa;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+}
+
+/* --- Import Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+
+/* --- Body Themes --- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+body.light-theme-body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-theme-body {
+  background-color: #0B0F19;
+  color: #E0E0E0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+body.light-theme-body h1,
+body.light-theme-body h2,
+body.light-theme-body h3,
+body.light-theme-body h4,
+body.light-theme-body h5,
+body.light-theme-body h6 {
+    color: #111111;
+}
+
+/* --- Navbar Themes --- */
+.navbar {
+  transition: background-color 0.4s ease-out !important;
+}
+
+.navbar-homepage {
+  background-color: rgba(11, 15, 25, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(136, 146, 176, 0.2) !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.navbar-homepage .navbar-brand {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.navbar-homepage .nav-link {
+  color: #8892B0 !important;
+  font-weight: 500 !important;
+}
+
+.navbar-homepage .nav-link:hover,
+.navbar-homepage .nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar-otherpages {
+  background-color: var(--bg-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm);
+  padding: 0.5rem 1.5rem !important;
+}
+
+.navbar-otherpages .navbar-brand {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+}
+
+.navbar-otherpages .nav-link {
+  color: #6c757d !important;
+  font-weight: 500 !important;
+}
+
+.navbar-otherpages .nav-link:hover {
+  color: #111111 !important;
+}
+
+.navbar-otherpages .nav-link.active {
+  color: var(--accent-color) !important;
+  font-weight: 600 !important;
+}
+
+/* --- Global Layout Fix for Fixed Navbar --- */
+.main-content-area {
+  padding-top: 90px;
+}
+
+/* --- Homepage Styles (Dark theme with purple accents) --- */
+.homepage-dark-wrapper {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.hero-section-dark {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.hero-title-dark {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px var(--accent-color);
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px var(--accent-color); }
+}
+
+.hero-subtitle-dark {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: #8892B0;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-description-dark {
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    color: #E0E0E0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.features-section-dark {
+    position: relative;
+    padding: 5rem 1rem 7rem 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(136, 146, 176, 0.2);
+}
+
+.section-title-dark {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 4rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.feature-card-dark {
+    background-color: rgba(16, 24, 40, 0.6);
+    border: 1px solid rgba(136, 146, 176, 0.2);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card-dark:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(118, 75, 255, 0.3);
+}
+
+.btn-custom {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(118, 75, 255, 0.3);
+}
+
+.btn-custom:hover {
+  background-color: #8c66ff;
+  box-shadow: 0 0 25px rgba(118, 75, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-star-trail {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-star-trail::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 400%;
+    height: 2px;
+    background-image: linear-gradient(90deg, transparent, #fff, transparent);
+    transform: translateY(-50%) rotate(-45deg);
+    animation: star-trail 8s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes star-trail {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* --- Styles for other pages (Upload, Editor, etc.) on light theme --- */
+.upload-page-container,
+.download-page-container,
+.analysis-page-container,
+.editor-page-container {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.upload-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+/* .chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+}
+
+.chatbot-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--light-bg);
+  font-weight: 600;
+  color: #111111;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chatbot-input {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+} */
+ /* --- Styles for Chatbot --- */
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+}
+
+.chatbot-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--light-bg);
+  font-weight: 600;
+  color: #111111;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* NEW: Wrapper for the icon and bubble */
+.message-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 85%;
+}
+
+/* NEW: General style for the message bubble */
+.chat-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  line-height: 1.5;
+}
+
+/* NEW: Icon styling */
+.chat-icon {
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  margin-top: 4px;
+}
+
+/* Styles for the bot's messages */
+.message-wrapper.bot {
+  align-self: flex-start;
+}
+.message-wrapper.bot .chat-bubble {
+  background-color: var(--light-bg);
+  color: #333;
+  border-top-left-radius: 4px;
+}
+.message-wrapper.bot .chat-icon {
+  color: var(--accent-color);
+}
+
+
+/* Styles for the user's messages */
+.message-wrapper.user {
+  align-self: flex-end;
+  /* Reverses the order of icon and bubble */
+  flex-direction: row-reverse; 
+}
+.message-wrapper.user .chat-bubble {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-top-right-radius: 4px;
+}
+.message-wrapper.user .chat-icon {
+  color: #555;
+}
+
+
+.chatbot-input {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
