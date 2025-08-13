@@ -11,10 +11,6 @@
   --radius: 8px;
 }
 
-/* --- Import Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
-
-/* --- Body Themes --- */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
