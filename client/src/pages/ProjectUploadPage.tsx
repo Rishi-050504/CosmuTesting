@@ -39,7 +39,7 @@ const ProjectUploadPage: React.FC = () => {
 
     try {
       navigate('/analysis'); // Navigate to loading page
-      const response = await axios.post('/api/analyze-code', formData, {
+      const response = await axios.post('http://localhost:3001/api/analyze-code', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setResult(response.data);

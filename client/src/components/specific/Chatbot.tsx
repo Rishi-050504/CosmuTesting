@@ -35,7 +35,7 @@ const Chatbot: React.FC = () => {
         try {
             const history = updatedMessages.slice(1);
 
-            const response = await axios.post('/api/chat', {
+            const response = await axios.post('http://localhost:3001/api/chat', {
                 message: input,
                 history: history,
             });

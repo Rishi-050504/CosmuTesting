@@ -5,7 +5,7 @@ const DownloadPage = () => {
 
   const handleDownload = async () => {
   try {
-    const response = await axios.get('/api/download', {
+    const response = await axios.get('http://localhost:3001/api/download', {
       responseType: 'blob', // Important: response is a binary file
     });
 

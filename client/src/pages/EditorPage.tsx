@@ -144,7 +144,7 @@ const EditorPage = () => {
     const newFileContent = modifiedEditorModel.getValue();
 
     try {
-      await axios.post('/api/update', {
+      await axios.post('http://localhost:3001/api/update', {
         filePath: selectedFile,
         newContent: newFileContent,
       });

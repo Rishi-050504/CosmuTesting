@@ -32,7 +32,7 @@ const SrsUploadPage: React.FC = () => {
     srsFiles.forEach(file => formData.append('srs', file));
 
     try {
-      const response = await axios.post('/api/generate-checklist', formData, {
+      const response = await axios.post('http://localhost:3001/api/generate-checklist', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       // Add 'selected: true' to each item by default
