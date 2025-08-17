@@ -7,7 +7,7 @@
 export interface AnalysisResult {
   checklist: ComplianceItem[];
   fileIssues: Record<string, FileIssue>;
-  fileContents: Record<string, string>; // Add this
+  fileContents: Record<string, string>;
 }
 
 export interface ComplianceItem {
